@@ -4,8 +4,8 @@
  
 ## vue-cli 环境初始化
  
- - 使用 `npm i -g @vue-cli` 安装最新版 vue-cli 脚手架
- - 基于 vue-cli 创建 vue 项目
+- 使用 `npm i -g @vue-cli` 安装最新版 vue-cli 脚手架
+- 基于 vue-cli 创建 vue 项目
 	 - 使用命令 `vue create 项目名称` 交互式命令创建 vue 项目
 		 - please pick a preset:
 		   - [ ] default(babel, eslint)
@@ -41,12 +41,12 @@
 	 - 使用命令 `vue ui` 图形化界面创建 vue 项目
 	 - 使用命令 `npm i -g @vue/cli-init` 和 `vue init webpack 项目名称` 创建基于 2.x 版本的旧版 vue 项目
  
- ## vue-cli 环境运行
- - 使用命令 `cd 项目目录` 进入项目根目录
- - 使用命令 `npm run serve` 启动项目
- - 使用命令 `npm run build` 编译打包项目
+## vue-cli 环境运行
+- 使用命令 `cd 项目目录` 进入项目根目录
+- 使用命令 `npm run serve` 启动项目
+- 使用命令 `npm run build` 编译打包项目
  
- ## 配置文件
+## 配置文件
 
 ### vue 相关的配置
 
@@ -74,3 +74,20 @@
 		}
 	}
     ```
+    
+## Element 组件库
+
+- 安装 element 组件库
+	- 使用命令 `npm i element-ui -S` 局部安装
+- 导入相关资源
+	```js
+	import ElementUI from "element-ui";
+	import 'element-ui/lib/theme-chalk/index.css'
+
+	Vue.use(ElementUI)
+	```
+	
+## Axios 插件
+
+- 安装 axios 插件
+    - 使用命令 `npm install --save axios vue-axios` 局部安装
