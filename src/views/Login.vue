@@ -123,7 +123,7 @@ export default {
     font-family: Serif, serif;
     font-size: 26px;
     margin-left: 2em;
-    color: #FFF;
+    color: #999;
 }
 
 #login-container .span-login-03 {
