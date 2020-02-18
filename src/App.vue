@@ -1,34 +1,29 @@
 <template>
-    <div id="app">
-        <div id="nav">
-            <h1>Welcome</h1>
-            <router-link to="/">Login</router-link>
-            |
-            <router-link to="/register">Register</router-link>
-        </div>
-        <router-view/>
-    </div>
+<div id="app">
+    <router-view />
+</div>
 </template>
 
-<style scoped>
-    #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* 62.5% = 10px = 1rem */
+    font-size: 62.5%;
+}
 
-    #nav {
-        padding: 30px;
-    }
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
 
-    #nav a {
-        font-weight: bold;
-        color: #2c3e50;
-    }
+#app{
+    height: 100%;
+}
 
-    #nav a.router-link-exact-active {
-        color: #42b983;
-    }
+.testdiv {
+    border: 2px solid red;
+}
 </style>
