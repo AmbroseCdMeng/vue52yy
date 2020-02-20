@@ -1,24 +1,29 @@
 <template>
-<div>
-    <el-row type="flex" class="row-bg" justify="center">
-        <div id="register-form">
-            <h1>Register Component</h1>
-            <el-form :model="user" status-icon :rules="rules" ref="user" label-width="100px" class="user">
-                <el-form-item label="Username" prop="username">
-                    <el-input type="password" v-model="user.username" autocomplete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="Password" prop="password">
-                    <el-input type="password" v-model="user.password" autocomplete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="RePassword" prop="rePassword">
-                    <el-input type="password" v-model="user.rePassword" autocomplete="off"></el-input>
-                </el-form-item>
-                <el-form-item>
-                    <el-button type="primary" @click="submit('user')">提交</el-button>
-                    <el-button @click="reset('user')">重置</el-button>
-                </el-form-item>
-            </el-form>
-        </div>
+<div id="register-form">
+    <el-row type="flex" class="">
+        <el-col>
+            <input class="input-fill" type="text" placeholder="Username" autocomplete="off" v-model="user.username">
+        </el-col>
+    </el-row>
+    <el-row type="flex" class="">
+        <el-col>
+            <input class="input-fill" type="password" placeholder="Password" autocomplete="off" v-model="user.password">
+        </el-col>
+    </el-row>
+    <el-row type="flex" class="">
+        <el-col>
+            <input class="input-fill" type="password" placeholder="RePassword" autocomplete="off" v-model="user.rePassword">
+        </el-col>
+    </el-row>
+    <el-row type="flex" class="">
+        <el-col>
+            <input class="input-fill" type="button" value="Register" @click="postRegister">
+        </el-col>
+    </el-row>
+    <el-row type="flex" class="">
+        <el-col>
+            <input class="input-fill" type="button" value="Reset" @click="frmReset">
+        </el-col>
     </el-row>
 </div>
 </template>
@@ -32,57 +37,19 @@ export default {
         username: '',
         password: '',
         rePassword: ''
-      },
-      rules: {
-        username: [{
-          validator: (rule, value, callback) => {
-            if (value === '') {
-              return callback(new Error('Please Enter Your Name'))
-            }
-          },
-          trigger: 'blur'
-        }],
-        password: [{
-          validator: (rule, value, callback) => {
-            if (value === '') {
-              callback(new Error('Please Enter Your Password'))
-            } else {
-              if (this.user.rePassword !== '') {
-                this.$refs.user.validateField('rePassword')
-              }
-              callback()
-            }
-          },
-          trigger: 'blur'
-        }],
-        rePassword: [{
-          validator: (rule, value, callback) => {
-            if (value === '') {
-              callback(new Error('Please Enter Your Password Again'))
-            } else if (value !== this.user.password) {
-              callback(new Error('The two passwords you entered were inconsistent!'))
-            } else {
-              callback()
-            }
-          },
-          trigger: 'blur'
-        }]
       }
     }
   },
   methods: {
-    submit (form) {
-      this.$refs[form].validate((valid) => {
-        if (valid) {
-          alert('submit!')
-        } else {
-          console.log('error submit!!')
-          return false
-        }
-      })
+    postRegister () {
+      return null
     },
-    reset (form) {
-      this.$refs[form].resetFields()
+    frmReset () {
+      this.user = {
+        username: '',
+        password: '',
+        rePassword: ''
+      }
     }
   }
 }
@@ -90,6 +57,35 @@ export default {
 
 <style>
 #register-form {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+#register-form .input-fill {
+    outline-style: none;
+    border: 0 solid #ccc;
     width: 100%;
+    height: 56px;
+    /* margin: 10px 0 10px 2px; */
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 2.4vh;
+    font-weight: 800;
+}
+
+#register-form .input-fill[type=button] {
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 900;
+    color: #FFF;
+    font-size: 26px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#register-form .input-fill[type=button]:hover {
+    color: aqua;
+    border: 2px solid aqua;
 }
 </style>

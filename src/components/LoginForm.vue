@@ -1,23 +1,23 @@
 <template>
 <div id="login-form">
     <el-row type="flex" class="">
-        <el-col :span="24">
+        <el-col>
             <input class="input-fill" type="text" placeholder="Username" autocomplete="off" v-model="user.username">
         </el-col>
     </el-row>
     <el-row type="flex" class="">
-        <el-col :span="24">
-            <input class="input-fill" type="text" placeholder="Password" autocomplete="off" v-model="user.password">
+        <el-col>
+            <input class="input-fill" type="password" placeholder="Password" autocomplete="off" v-model="user.password">
         </el-col>
     </el-row>
     <el-row type="flex" class="">
-        <el-col :span="24">
-            <input class="input-fill" type="button" value="Login">
+        <el-col>
+            <input id="btn-login" class="input-fill" type="button" value="Login" @click="postLogin">
         </el-col>
     </el-row>
     <el-row type="flex" class="">
-        <el-col :span="24">
-            <input class="input-fill" type="button" value="Reset">
+        <el-col>
+            <input id="btn-reset" class="input-fill" type="button" value="Reset" @click="frmReset">
         </el-col>
     </el-row>
     <el-row type="flex" class="row-link-forget " justify="end">
@@ -29,31 +29,49 @@
 </template>
 
 <script>
+import {
+  Toast
+} from 'mint-ui'
+import {
+  setCookie
+} from '@/assets/cookie'
+
 export default {
   name: 'Login',
   data () {
     return {
       user: {
-        username: '',
-        password: ''
+        username: '52yy-Admin',
+        password: '366963496994914468'
       }
     }
   },
 
   methods: {
     postLogin () {
-      // this.axios.get('api').then((response) => {
-      //   this.$router.push({
-      //     path: '/home',
-      //     replace: true
-      //   })
-      // })
-      return this.$router.push({
-        path: '/home',
-        replace: true
+      const api = 'https://www.runoob.com/try/ajax/json_demo.json'
+      this.axios.get(api).then(response => {
+        Toast('登录成功')
+        setCookie('use-login-c', this.usename, 20)
+        this.$router.push({
+          path: '/home',
+          replace: true
+        })
+      }).catch(error => {
+        Toast(error.message)
+        this.$router.replace({
+          path: '/home'
+        })
       })
+    },
+    frmReset () {
+      this.user = {
+        username: '',
+        password: ''
+      }
     }
   }
+
 }
 </script>
 
@@ -92,10 +110,11 @@ export default {
     color: #FFF;
     font-size: 26px;
     border-radius: 50px;
+    cursor: pointer;
 }
 
-#login-form .login-contain #username,
-#login-form .login-contain #password {
-    padding: 5px 20px;
+#login-form .input-fill[type=button]:hover {
+    color: aqua;
+    border: 2px solid aqua;
 }
 </style>

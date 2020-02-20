@@ -1,10 +1,10 @@
 <template>
-    <div class="home">
-        <Header/>
-        <Left/>
-        <Footer/>
-        <Main/>
-    </div>
+<div class="home">
+    <Header />
+    <Left />
+    <Footer />
+    <Main />
+</div>
 </template>
 
 <script>
@@ -16,6 +16,11 @@ import Main from '../components/Main'
 
 export default {
   name: 'Home',
+  data () {
+    return {
+      flag: true
+    }
+  },
   components: {
     Header,
     Left,

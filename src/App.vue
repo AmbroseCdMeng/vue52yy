@@ -17,6 +17,9 @@ html,
 body {
     height: 100%;
     width: 100%;
+    min-width: 999px;
+    min-height: 956px;
+    overflow: auto;
 }
 
 #app{

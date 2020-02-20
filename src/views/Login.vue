@@ -23,17 +23,17 @@
         <el-col :span="6">
             <div>
                 <el-row type="flex" justify="center" align="middle">
-                    <el-col class="tab-active" :class="['col-tab',{ 'tab-active':active == 'login'}]">
-                        <a href="" id="tab-login" class="tab-login" @click.prevent="active='LoginForm'">登录</a>
+                    <el-col :class="['col-tab',{ 'tab-active':active == 'LoginForm'}]">
+                        <span id="tab-login" class="tab-login"  @click.prevent="active='LoginForm'">登录</span>
                     </el-col>
-                    <el-col :class="['col-tab',{ 'tab-active':active=='register'}]">
-                        <a href="" id="tab-register" class="tab-login" @click.prevent="active='RegisterForm'">注册</a>
+                    <el-col :class="['col-tab',{ 'tab-active':active=='RegisterForm'}]">
+                        <span id="tab-login" class="tab-login"  @click.prevent="active='RegisterForm'">注册</span>
                     </el-col>
                 </el-row>
 
                 <el-row id="row-component" class="row-component" type="flex" justify="center">
                     <el-col>
-                        <transition mode="out-in">
+                        <transition mode="out-in" enter-active-class="animated zoomIn" leave-active-class="animated zoomOut" :duration="{enter:800, leave:200}">
                             <component :is="active"></component>
                         </transition>
                     </el-col>
@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style>
-.v-enter,
+/* .v-enter,
 .v-leave {
     opacity: 0;
     transform: translate(150px);
@@ -80,11 +80,7 @@ export default {
 .v-enter-active,
 .v-leave-active {
     transition: all 0.6s ease;
-}
-
-.tab-active {
-    background-color: aqua;
-}
+} */
 
 #login-container {
     width: 100%;
@@ -102,7 +98,7 @@ export default {
     filter: blur(0px) grayscale(60%) opacity(85%);
     /* 模糊度 灰度 透明度 */
     z-index: -1;
-    background-size: cover;
+    background-size: 100% 100%;
     width: 100%;
     height: 100%;
 }
@@ -141,11 +137,30 @@ export default {
 }
 
 #login-container .col-tab {
-    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #999; */
+    height: 50px;
+    border: 2px ridge #333;
+    border-radius: 18px;
+}
+
+#login-container .col-tab:hover {
+    background-color: #CDC7BE;
+    border: 2px ridge aqua;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+#login-container .tab-active {
+    background-color: #C1BAB4;
 }
 
 #login-container .tab-login {
     font-size: 26px;
+    width: 100%;
+    text-decoration: none;
 }
 
 #login-container #row-context-01 {
