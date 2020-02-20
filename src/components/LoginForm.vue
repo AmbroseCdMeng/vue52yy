@@ -32,9 +32,6 @@
 import {
   Toast
 } from 'mint-ui'
-import {
-  setCookie
-} from '@/assets/cookie'
 
 export default {
   name: 'Login',
@@ -49,20 +46,23 @@ export default {
 
   methods: {
     postLogin () {
-      const api = 'https://www.runoob.com/try/ajax/json_demo.json'
-      this.axios.get(api).then(response => {
-        Toast('登录成功')
-        setCookie('use-login-c', this.usename, 20)
-        this.$router.push({
-          path: '/home',
-          replace: true
-        })
-      }).catch(error => {
-        Toast(error.message)
-        this.$router.replace({
-          path: '/home'
-        })
+      Toast('登录成功')
+      // this.$store.commit('setUsername', this.username)
+      this.$router.push({
+        path: '/home',
+        replace: true
       })
+      // const api = 'https://www.runoob.com/try/ajax/json_demo.json'
+      // this.axios.get(api).then(response => {
+      //   Toast('登录成功')
+      //   setCookie('use-login-c', this.usename, 20)
+      //   this.$router.push({
+      //     path: '/home',
+      //     replace: true
+      //   })
+      // }).catch(error => {
+      //   Toast(error.message)
+      // })
     },
     frmReset () {
       this.user = {

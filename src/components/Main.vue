@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="main">
       <h1>Main</h1>
     </div>
 </template>
@@ -11,7 +11,9 @@ export default {
 </script>
 
 <style scoped>
-div{
-  background-color: brown
+div#main{
+  background-color: brown;
+  height: 100%;
+  width: 100%;
 }
 </style>

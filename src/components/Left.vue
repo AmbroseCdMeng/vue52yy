@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="left">
       <h1>Left</h1>
     </div>
 </template>
@@ -11,7 +11,9 @@ export default {
 </script>
 
 <style scoped>
-div{
-  background-color: blue
+div#left{
+  background-color: blue;
+  width: 100%;
+  height: 100%;
 }
 </style>

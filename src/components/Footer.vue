@@ -1,6 +1,6 @@
 <template>
-    <div>
-      <h1><Footer></Footer></h1>
+    <div id="footer">
+      <h1>Footer</h1>
     </div>
 </template>
 
@@ -11,7 +11,9 @@ export default {
 </script>
 
 <style scoped>
-div{
+div#footer{
   background-color: antiquewhite;
+  width: 100%;
+  height: 100%;
 }
 </style>
