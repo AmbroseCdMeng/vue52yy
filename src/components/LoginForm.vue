@@ -30,7 +30,8 @@
 
 <script>
 import {
-  Toast
+  Toast,
+  Indicator
 } from 'mint-ui'
 
 export default {
@@ -46,7 +47,16 @@ export default {
 
   methods: {
     postLogin () {
-      Toast('登录成功')
+      Indicator.open({
+        text: '登录中...',
+        spinnerType: 'fading-circle'
+      })
+      Indicator.close()
+      Toast({
+        message: '登录成功',
+        position: 'center',
+        duration: 1000
+      })
       // this.$store.commit('setUsername', this.username)
       this.$router.push({
         path: '/home',

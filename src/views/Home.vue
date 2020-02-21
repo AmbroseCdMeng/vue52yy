@@ -1,10 +1,10 @@
 <template>
 <div id="home" class="home">
-    <div id="left" >
+    <div id="left">
         <Left />
     </div>
-    <div id="middle" >
-        <div id="header" >
+    <div id="middle">
+        <div id="header">
             <Header />
         </div>
         <div id="main">
@@ -47,7 +47,7 @@ export default {
 }
 
 #home #middle {
-   width: 100%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
@@ -57,12 +57,12 @@ export default {
 
 #home>#left {
     height: 100%;
-    width: 10%
+    width: 11.7%
 }
 
 #home>#middle>#header {
     width: 100%;
-    height: 20%;
+    height: 7%;
 }
 
 #home>#middle>#main {
@@ -72,7 +72,7 @@ export default {
 
 #home #footer {
     height: 20%;
-    width: 80%;
+    width: 100%;
     align-items: flex-end;
 }
 </style>
