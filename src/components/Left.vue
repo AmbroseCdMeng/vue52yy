@@ -5,7 +5,7 @@
     </div>
     <div class="left-menu">
         <div id="img-user-info" class="">
-            <img src="../assets/header.jpg" alt="" srcset="">
+            <img src="../assets/header.png" alt="" srcset="">
         </div>
         <div id="menu" class="">
             <component id="menu-component" :is="'Menu'"></component>
@@ -63,19 +63,17 @@ div#left .left-menu #img-user-info {
 }
 
 div#left .left-menu #img-user-info img {
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    height: 70%;
     border-radius: 50%
 }
 
 div#left .left-menu #menu {
     width: 100%;
     height: 100%;
-    position: relative;
 }
 
 div#left .left-menu #menu #menu-component {
-    position: absolute;
     width: 100%;
 }
 </style>

@@ -57,7 +57,7 @@ export default {
 
 #home>#left {
     height: 100%;
-    width: 11.7%
+    width: 11%
 }
 
 #home>#middle>#header {

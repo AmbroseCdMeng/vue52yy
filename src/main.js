@@ -15,6 +15,8 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 
 // import { getCookie } from '@/assets/cookie'
+import common from '@/assets/common'
+Vue.prototype.COMMON = common
 
 Vue.use(ElementUI)
 // Vue.use(Mint)

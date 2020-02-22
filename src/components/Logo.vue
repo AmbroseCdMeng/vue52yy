@@ -1,6 +1,6 @@
 <template>
 <div id="logo">
-    <h1>52YY</h1>
+    <img src="../assets/logo52yy.png" alt="logo" srcset="">
 </div>
 </template>
 
@@ -14,9 +14,11 @@ div#logo{
     width: 100%;
     height: 100%;
     background-color: #3285FF;
+    display: flex;
+    justify-content: center;
 }
-h1{
-font-size: 40px;
-color: #FFF;
+div#logo img{
+  width: 80%;
+  height: 100%;
 }
 </style>

@@ -49,20 +49,30 @@ export default {
     postLogin () {
       Indicator.open({
         text: '登录中...',
-        spinnerType: 'fading-circle'
+        spinnerType: 'triple-bounce' /* snake  fading-circle  double-bounce   triple-bounce */
       })
-      Indicator.close()
-      Toast({
-        message: '登录成功',
-        position: 'center',
-        duration: 1000
+
+      this.COMMON.sleep(1500, () => {
+        if (this.user.username === '52yy-Admin') {
+          Indicator.close()
+          Toast({
+            message: '登录成功',
+            position: 'center',
+            duration: 1000
+          })
+          this.$router.push({
+            path: '/home',
+            replace: true
+          })
+        }
       })
+
       // this.$store.commit('setUsername', this.username)
-      this.$router.push({
-        path: '/home',
-        replace: true
-      })
-      // const api = 'https://www.runoob.com/try/ajax/json_demo.json'
+
+      /**
+             * 为了演示方便。暂屏蔽 ajax 请求
+             * */
+      // const api = ''
       // this.axios.get(api).then(response => {
       //   Toast('登录成功')
       //   setCookie('use-login-c', this.usename, 20)
