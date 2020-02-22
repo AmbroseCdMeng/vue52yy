@@ -5,7 +5,7 @@
     </div>
     <div class="left-menu">
         <div id="img-user-info" class="">
-            <img src="../assets/header.png" alt="" srcset="">
+            <img src="../assets/image/header.png" alt="" srcset="">
         </div>
         <div id="menu" class="">
             <component id="menu-component" :is="'Menu'"></component>

@@ -93,7 +93,7 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    background: transparent url(../assets/bg.jpg) center center no-repeat;
+    background: transparent url(../assets/image/bg.jpg) center center no-repeat;
     /*-webkit-filter: opacity(55%);*/
     filter: blur(0px) grayscale(60%) opacity(85%);
     /* 模糊度 灰度 透明度 */
