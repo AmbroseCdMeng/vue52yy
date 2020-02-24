@@ -2,12 +2,12 @@
 <div id="login-form">
     <el-row type="flex" class="">
         <el-col>
-            <input class="input-fill" type="text" placeholder="Username" autocomplete="off" v-model="user.username">
+            <input class="input-fill" type="text" placeholder="Username" autocomplete="off" v-model.trim="user.username">
         </el-col>
     </el-row>
     <el-row type="flex" class="">
         <el-col>
-            <input class="input-fill" type="password" placeholder="Password" autocomplete="off" v-model="user.password">
+            <input class="input-fill" type="password" placeholder="Password" autocomplete="off" v-model.trim="user.password">
         </el-col>
     </el-row>
     <el-row type="flex" class="">

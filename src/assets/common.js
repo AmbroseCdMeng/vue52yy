@@ -1,4 +1,3 @@
-<script>
 function sleep (milliseconds, callBack) {
   new Promise((resolve, reject) => {
     setTimeout(resolve, milliseconds)
@@ -9,4 +8,3 @@ function sleep (milliseconds, callBack) {
 export default {
   sleep
 }
-</script>

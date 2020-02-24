@@ -7,7 +7,7 @@
                 <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
-        <component :is="'Tabs'" />
+        <component class="main-tabs" :is="'Tabs'" />
     </div>
 </div>
 </template>
@@ -41,5 +41,9 @@ div#main .main-container {
 
 div#main .main-linked{
 height: 2.6%;
+}
+
+div#main .main-tabs{
+  height: 97.4%;
 }
 </style>

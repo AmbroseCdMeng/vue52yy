@@ -1,17 +1,17 @@
 <template>
-<div id="home" class="home">
-    <div id="left">
-        <Left />
-    </div>
-    <div id="middle">
-        <div id="header">
-            <Header />
-        </div>
-        <div id="main">
-            <Main />
-        </div>
-    </div>
-</div>
+    <el-container direction="horizontal">
+        <el-aside width="11%">
+            <Left />
+        </el-aside>
+        <el-container  direction="vertical">
+            <el-header height="7%">
+                <Header />
+            </el-header>
+            <el-main>
+                <Main />
+            </el-main>
+        </el-container>
+    </el-container>
 </template>
 
 <script>
@@ -37,42 +37,13 @@ export default {
 </script>
 
 <style scoped>
-#home {
-    width: 100%;
+.el-container{
     height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
 }
-
-#home #middle {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+.el-main{
+    padding:2px;
 }
-
-#home>#left {
-    height: 100%;
-    width: 11%
-}
-
-#home>#middle>#header {
-    width: 100%;
-    height: 7%;
-}
-
-#home>#middle>#main {
-    height: 100%;
-    width: 100%
-}
-
-#home #footer {
-    height: 20%;
-    width: 100%;
-    align-items: flex-end;
+.el-header{
+padding: 0 2px;
 }
 </style>

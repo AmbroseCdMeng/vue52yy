@@ -15,8 +15,16 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 
 // import { getCookie } from '@/assets/cookie'
-import common from '@/assets/common'
+import common from '@/assets/common.js'
+import filters from '@/assets/filters.js'
+import directives from '@/assets/directives.js'
 Vue.prototype.COMMON = common
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
+Object.keys(directives).forEach(key => {
+  Vue.directive(key, directives[key])
+})
 
 Vue.use(ElementUI)
 // Vue.use(Mint)
@@ -26,33 +34,6 @@ Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
-
-Vue.filter('date2string', (date, frm = 'yyyy-MM-dd hh:mm:ss') => {
-  const o = {
-    'M+': date.getMonth() + 1,
-    'd+': date.getDate(),
-    'h+': date.getHours(),
-    'm+': date.getMinutes(),
-    's+': date.getSeconds(),
-    'q+': Math.floor((date.getMonth() + 3) / 3),
-    S: date.getMilliseconds()
-  }
-  if (/(y+)/.test(frm)) {
-    frm = frm.replace(
-      RegExp.$1,
-      (date.getFullYear() + '').substr(4 - RegExp.$1.length)
-    )
-  }
-  for (const k in o) {
-    if (new RegExp('(' + k + ')').test(frm)) {
-      frm = frm.replace(
-        RegExp.$1,
-        RegExp.$1.length === 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length)
-      )
-    }
-  }
-  return frm
-})
 
 new Vue({
   router,
