@@ -16,21 +16,26 @@ export default {
     return {
       items: [{
         name: '全国',
-        dataSource: 'http://localhost:3000/nCov'
+        // dataSource: 'http://localhost:3000/nCov'
+        dataSource: '/json/nCov.json'
       },
       {
         name: '湖北',
-        dataSource: 'http://localhost:3000/nCov/%E6%B9%96%E5%8C%97'
+        // dataSource: 'http://localhost:3000/nCov/%E6%B9%96%E5%8C%97'
+        dataSource: '/json/nCov-hb.json'
       },
       {
         name: '江西',
-        dataSource: 'http://localhost:3000/nCov/%E6%B1%9F%E8%A5%BF'
+        // dataSource: 'http://localhost:3000/nCov/%E6%B9%96%E5%8C%97'
+        dataSource: '/json/nCov-jx.json'
       }, {
         name: '甘肃',
-        dataSource: 'http://localhost:3000/nCov/%E7%94%98%E8%82%83'
+        // dataSource: 'http://localhost:3000/nCov/%E6%B9%96%E5%8C%97'
+        dataSource: '/json/nCov-gs.json'
       }, {
         name: '广东',
-        dataSource: 'http://localhost:3000/nCov/%E5%B9%BF%E4%B8%9C'
+        // dataSource: 'http://localhost:3000/nCov/%E6%B9%96%E5%8C%97'
+        dataSource: '/json/nCov-gd.json'
       }
       ]
     }
