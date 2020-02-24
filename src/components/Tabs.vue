@@ -17,25 +17,25 @@ export default {
       items: [{
         name: '全国',
         // dataSource: 'http://localhost:3000/nCov'
-        dataSource: '/json/nCov.json'
+        dataSource: './json/nCov.json'
       },
       {
         name: '湖北',
         // dataSource: 'http://localhost:3000/nCov/%E6%B9%96%E5%8C%97'
-        dataSource: '/json/nCov-hb.json'
+        dataSource: './json/nCov-hb.json'
       },
       {
         name: '江西',
         // dataSource: 'http://localhost:3000/nCov/%E6%B9%96%E5%8C%97'
-        dataSource: '/json/nCov-jx.json'
+        dataSource: './json/nCov-jx.json'
       }, {
         name: '甘肃',
         // dataSource: 'http://localhost:3000/nCov/%E6%B9%96%E5%8C%97'
-        dataSource: '/json/nCov-gs.json'
+        dataSource: './json/nCov-gs.json'
       }, {
         name: '广东',
         // dataSource: 'http://localhost:3000/nCov/%E6%B9%96%E5%8C%97'
-        dataSource: '/json/nCov-gd.json'
+        dataSource: './json/nCov-gd.json'
       }
       ]
     }
