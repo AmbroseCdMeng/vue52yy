@@ -3,7 +3,7 @@
     <el-row class="tac">
         <el-col>
             <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#214D96" text-color="#fff" active-text-color="#ffd04b">
-                <el-submenu index="1">
+                <!-- <el-submenu index="1">
                     <template slot="title">
                         <i class="el-icon-location"></i>
                         <span>Guide</span>
@@ -32,7 +32,9 @@
                 <el-menu-item index="4">
                     <i class="el-icon-setting"></i>
                     <span slot="title">Setting</span>
-                </el-menu-item>
+                </el-menu-item> -->
+
+                <nav-menu :navmenus="menuItems"></nav-menu>
             </el-menu>
         </el-col>
     </el-row>
@@ -40,15 +42,35 @@
 </template>
 
 <script>
+import NavMenu from '@/components/NavMenu'
 export default {
   name: 'Menu',
+  data () {
+    return {
+      menuItems: []
+    }
+  },
   methods: {
     handleOpen (key, keyPath) {
       //   console.log(key, keyPath)
     },
     handleClose (key, keyPath) {
       //   console.log(key, keyPath)
+    },
+    getMenuItems () {
+      const url = './json/guide-left-menu.json'
+      this.axios.get(url).then(response => {
+        if (response.status === 200) {
+          this.menuItems = response.data.data
+        }
+      })
     }
+  },
+  components: {
+    NavMenu
+  },
+  created () {
+    this.getMenuItems()
   }
 }
 </script>

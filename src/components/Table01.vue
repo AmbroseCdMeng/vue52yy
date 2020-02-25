@@ -2,36 +2,58 @@
 <div id="table01" class="">
     <div class="table-container">
         <el-table ref="tab" :data="tableData" style="width: 100%" height="100%" border highlight-current-row :row-class-name="tableRowClassName" @current-change="handleCurrentChange" cell-class-name="nowrap" header-cell-class-name="text-center">
+
             <el-table-column fixed type="index" label="no" width="50" align="center">
             </el-table-column>
-            <el-table-column fixed prop="_id" label="_id" width="250">
+            <el-table-column fixed prop="_id" label="_id" width="250" align="center">
             </el-table-column>
-            <el-table-column fixed prop="pkid" label="pkid" width="250">
+            <el-table-column fixed prop="pkid" label="pkid" width="250" align="center">
             </el-table-column>
             <el-table-column fixed prop="provinces" label="provinces" width="100" align="center">
             </el-table-column>
             <el-table-column fixed prop="date" label="date" width="150" align="center" :filters="filtersDate" :filter-method="filterHandler" :formatter="formatter">
-                <template slot-scope="scope">{{ scope.row.date | date2string }}</template>
+                <template slot-scope="scope">
+                    <i class="el-icon-time"></i>
+                    {{ scope.row.date | date2string }}
+                </template>
             </el-table-column>
 
             <el-table-column label="base-data">
-                <el-table-column prop="confirmed_case" label="confirmed_case" align="center" width="150" >
+                <el-table-column prop="confirmed_case" label="confirmed_case" align="center" width="150">
+                </el-table-column>
+                <el-table-column prop="suspected_case" label="suspected_case" align="center" width="150">
+                </el-table-column>
+                <el-table-column prop="death_case" label="death_case" align="center" width="150" class-name='column-warning'>
+                </el-table-column>
+                <el-table-column prop="death_case_rate" label="death_case_rate" align="center" width="150" >
                     <template slot-scope="scope">
-                        <span v-warningcolor="'red'">{{ scope.row.confirmed_case }}</span>
+                        <span v-warningcolor="'red'">{{ `${(scope.row.death_case / scope.row.confirmed_case * 100).toFixed(3)} %` }}</span>
                     </template>
                 </el-table-column>
-                <el-table-column prop="suspected_case" label="suspected_case" align="center" width="150" >
+                <el-table-column prop="cured_case" label="cured_case" align="center" width="150">
                 </el-table-column>
-                <el-table-column prop="death_case" label="death_case" align="center" width="150" >
-                </el-table-column>
-                <el-table-column prop="cured_case" label="cured_case" align="center" width="150" >
+                <el-table-column prop="cured_case_rate" label="cured_case_rate" align="center" width="150" class-name='column-rate'>
+                    <template slot-scope="scope">
+                        <span v-warningcolor="'red'">{{ `${(scope.row.cured_case / scope.row.confirmed_case * 1000).toFixed(5)} ‰` }}</span>
+                    </template>
                 </el-table-column>
             </el-table-column>
 
-            <el-table-column prop="creater" label="creater" align="center" width="150" >
+            <el-table-column prop="creater" label="creater" align="center" width="150">
             </el-table-column>
-            <el-table-column prop="createdate" label="createdate" align="center" width="150" >
-                <template slot-scope="scope">{{scope.createdate | date2string}}
+            <el-table-column prop="createdate" label="createdate" align="center" width="150">
+                <template slot-scope="scope">{{scope.createdate | date2string}} </template>
+            </el-table-column>
+
+            <el-table-column prop="updater" label="updater" align="left" width="250">
+                <template slot-scope="scope">
+                    <el-popover trigger="hover" placement="top">
+                        <p>修改人: {{ scope.row.updater }}</p>
+                        <p>修改日期: {{ scope.row.updatedate | date2string}}</p>
+                        <div slot="reference" class="name-wrapper">
+                            <el-tag effect="plain" size="medium">鼠标放置此处查看详情</el-tag>
+                        </div>
+                    </el-popover>
                 </template>
             </el-table-column>
         </el-table>
@@ -137,6 +159,14 @@ div#table01 .table-container {
     height: 100%;
 }
 </style><style>
+.el-table__body tr.hover-row>td {
+    background-color: #FFFF99;
+}
+
+.el-table--enable-row-transition .el-table__body td {
+    transition: background-color 0.4s ease;
+}
+
 .el-table .odd-row {
     background: oldlace;
 }
@@ -159,5 +189,9 @@ div#table01 .table-container {
 
 .text-center>div.cell {
     text-align: center;
+}
+
+.column-warning {
+    background-color: #FFCCCC
 }
 </style>

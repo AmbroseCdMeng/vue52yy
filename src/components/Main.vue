@@ -1,12 +1,12 @@
 <template>
 <div id="main">
     <div class="main-container">
-        <div class="main-linked">
+        <!-- <div class="main-linked">
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item :to="{ path: '/' }">Login</el-breadcrumb-item>
                 <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
             </el-breadcrumb>
-        </div>
+        </div> -->
         <component class="main-tabs" :is="'Tabs'" />
     </div>
 </div>
@@ -38,12 +38,16 @@ div#main .main-container {
     height: calc(100% - 25px);
     background-color: #FFFFFF;
 }
-
+/*
 div#main .main-linked{
 height: 2.6%;
 }
 
 div#main .main-tabs{
   height: 97.4%;
+} */
+
+div#main .main-tabs{
+  height: 100%;
 }
 </style>
