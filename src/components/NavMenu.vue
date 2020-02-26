@@ -9,7 +9,7 @@
         </template>
         <NavMenu :navmenus="navMenu.children"></NavMenu>
       </el-submenu>
-      <el-menu-item v-else  :key="navMenu.id" :data="navMenu" :index="navMenu.id" :disabled="!navMenu.hasPremise" v-show="navMenu.isValid">
+      <el-menu-item v-else  :key="navMenu.id" :data="navMenu" :index="navMenu.id" :disabled="!navMenu.hasPremise" v-show="navMenu.isValid" :route="navMenu.path">
         <i :class="navMenu.icon"></i>
         <span slot="title">{{navMenu.cname}}</span>
       </el-menu-item>
