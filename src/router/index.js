@@ -30,39 +30,41 @@ const routes = [
     /* 自定义对象配置路由拦截 */
     meta: {
       requireAuth: true // 需要登录才可以访问
-    }
-  },
-  {
-    path: '/news',
-    name: 'News',
-    component: () => import('../views/News'),
-    meta: {
-      requireAuth: true // 需要登录才可以访问
-    }
-  },
-  {
-    path: '/report',
-    name: 'Report',
-    component: () => import('../views/Report'),
-    meta: {
-      requireAuth: true // 需要登录才可以访问
-    }
-  },
-  {
-    path: '/chart',
-    name: 'Chart',
-    component: () => import('../views/Chart'),
-    meta: {
-      requireAuth: true // 需要登录才可以访问
-    }
-  },
-  {
-    path: '/form',
-    name: 'Form',
-    component: () => import('../views/Form'),
-    meta: {
-      requireAuth: true // 需要登录才可以访问
-    }
+    },
+    children: [
+      {
+        path: 'news',
+        name: 'News',
+        component: () => import('../views/News'),
+        meta: {
+          requireAuth: true
+        }
+      },
+      {
+        path: 'report',
+        name: 'Report',
+        component: () => import('../views/Report'),
+        meta: {
+          requireAuth: true
+        }
+      },
+      {
+        path: 'chart',
+        name: 'Chart',
+        component: () => import('../views/Chart'),
+        meta: {
+          requireAuth: true
+        }
+      },
+      {
+        path: 'form',
+        name: 'Form',
+        component: () => import('../views/Form'),
+        meta: {
+          requireAuth: true
+        }
+      }
+    ]
   }
 ]
 

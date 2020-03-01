@@ -8,7 +8,8 @@
                 <Header />
             </el-header>
             <el-main>
-                <Main />
+                <!-- <Main /> -->
+                <router-view></router-view>
             </el-main>
         </el-container>
     </el-container>
@@ -18,7 +19,7 @@
 // @ is an alias to /src
 import Header from '@/components/Header'
 import Left from '@/components/Left'
-import Main from '@/components/Main'
+// import Main from '@/components/Main'
 // import Footer from '@/components/Footer'
 
 export default {
@@ -30,8 +31,8 @@ export default {
   },
   components: {
     Header,
-    Left,
-    Main
+    Left
+    // Main
   }
 }
 </script>

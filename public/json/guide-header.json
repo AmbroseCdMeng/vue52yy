@@ -10,7 +10,7 @@
       "isValid": true,
       "hasPremise": true,
       "targeBlank": false,
-      "path": "/news",
+      "path": "/home/news",
       "children": []
     },
     {
@@ -21,7 +21,7 @@
       "isValid": true,
       "hasPremise": true,
       "targeBlank": false,
-      "path": "/report",
+      "path": "/home/report",
       "children": []
     },
     {
@@ -32,7 +32,7 @@
       "isValid": true,
       "hasPremise": true,
       "targeBlank": false,
-      "path": "/chart",
+      "path": "/home/chart",
       "children": []
     },
     {
@@ -43,7 +43,7 @@
       "isValid": true,
       "hasPremise": true,
       "targeBlank": false,
-      "path": "/chart",
+      "path": "/home/form",
       "children": []
     },
     {
@@ -64,7 +64,7 @@
           "isValid": true,
           "hasPremise": true,
           "targeBlank": false,
-          "path": "/userManagement",
+          "path": "/home/userManagement",
           "children": []
         },
         {
@@ -75,7 +75,7 @@
           "isValid": true,
           "hasPremise": true,
           "targeBlank": false,
-          "path": "/roleManagement",
+          "path": "/home/roleManagement",
           "children": []
         },
         {
@@ -86,7 +86,7 @@
           "isValid": true,
           "hasPremise": true,
           "targeBlank": false,
-          "path": "/rightManagement",
+          "path": "/home/rightManagement",
           "children": [
             {
               "id": "4-3-1",
@@ -96,7 +96,7 @@
               "isValid": true,
               "hasPremise": true,
               "targeBlank": false,
-              "path": "/item1",
+              "path": "/home/rightManagement/item1",
               "children": []
             },
             {
@@ -107,7 +107,7 @@
               "isValid": true,
               "hasPremise": true,
               "targeBlank": false,
-              "path": "/item2",
+              "path": "/home/rightManagement/item2",
               "children": []
             }
           ]
