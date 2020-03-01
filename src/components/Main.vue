@@ -16,7 +16,6 @@
 import Tabs from '@/components/Tabs'
 export default {
   name: 'Main',
-  props: ['mainComp'],
   components: {
     Tabs
   }
