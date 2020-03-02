@@ -1,5 +1,6 @@
 <template>
 <div id="main">
+  <!-- 模板 弃用 -->
     <div class="main-container">
         <!-- <div class="main-linked">
             <el-breadcrumb separator="/">
