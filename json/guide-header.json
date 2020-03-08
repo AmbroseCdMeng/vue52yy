@@ -1,0 +1,118 @@
+{
+  "status": 0,
+  "message": "Success",
+  "data": [
+    {
+      "id": "0",
+      "icon": "",
+      "ename": "Today's News",
+      "cname": "今日新闻",
+      "isValid": true,
+      "hasPremise": true,
+      "targeBlank": false,
+      "path": "/home/news",
+      "children": []
+    },
+    {
+      "id": "1",
+      "icon": "",
+      "ename": "Data Report",
+      "cname": "数据报表",
+      "isValid": true,
+      "hasPremise": true,
+      "targeBlank": false,
+      "path": "/home/report",
+      "children": []
+    },
+    {
+      "id": "2",
+      "icon": "",
+      "ename": "Data Chart",
+      "cname": "数据图表",
+      "isValid": true,
+      "hasPremise": true,
+      "targeBlank": false,
+      "path": "/home/chart",
+      "children": []
+    },
+    {
+      "id": "3",
+      "icon": "",
+      "ename": "Data Form",
+      "cname": "数据表单",
+      "isValid": true,
+      "hasPremise": true,
+      "targeBlank": false,
+      "path": "/home/form",
+      "children": []
+    },
+    {
+      "id": "4",
+      "icon": "",
+      "ename": "Backstage management",
+      "cname": "后台管理",
+      "isValid": true,
+      "hasPremise": true,
+      "targeBlank": false,
+      "path": "/",
+      "children": [
+        {
+          "id": "4-1",
+          "icon": "",
+          "ename": "Users Management",
+          "cname": "用户管理",
+          "isValid": true,
+          "hasPremise": true,
+          "targeBlank": false,
+          "path": "/home/userManagement",
+          "children": []
+        },
+        {
+          "id": "4-2",
+          "icon": "",
+          "ename": "Roles Management",
+          "cname": "角色管理",
+          "isValid": true,
+          "hasPremise": true,
+          "targeBlank": false,
+          "path": "/home/roleManagement",
+          "children": []
+        },
+        {
+          "id": "4-3",
+          "icon": "",
+          "ename": "Rights Management",
+          "cname": "权限管理",
+          "isValid": true,
+          "hasPremise": true,
+          "targeBlank": false,
+          "path": "/home/rightManagement",
+          "children": [
+            {
+              "id": "4-3-1",
+              "icon": "",
+              "ename": "Item 01",
+              "cname": "项目一",
+              "isValid": true,
+              "hasPremise": true,
+              "targeBlank": false,
+              "path": "/home/rightManagement/item1",
+              "children": []
+            },
+            {
+              "id": "4-3-2",
+              "icon": "",
+              "ename": "Item 03",
+              "cname": "项目二",
+              "isValid": true,
+              "hasPremise": true,
+              "targeBlank": false,
+              "path": "/home/rightManagement/item2",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
