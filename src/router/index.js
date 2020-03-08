@@ -27,6 +27,7 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: () => import('../views/Home'),
+    redirect: '/home/report',
     /* 自定义对象配置路由拦截 */
     meta: {
       requireAuth: true // 需要登录才可以访问
