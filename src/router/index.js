@@ -64,6 +64,22 @@ const routes = [
         meta: {
           requireAuth: true
         }
+      },
+      {
+        path: 'userManagement',
+        name: 'UserManagement',
+        component: () => import('../views/UserManagement'),
+        meta: {
+          requireAuth: true
+        }
+      },
+      {
+        path: 'roleManagement',
+        name: 'roleManagement',
+        component: () => import('../views/UserManagement'),
+        meta: {
+          requireAuth: true
+        }
       }
     ]
   }

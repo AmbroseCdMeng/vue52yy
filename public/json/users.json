@@ -1,0 +1,76 @@
+{
+  "status": 0,
+  "message": "Success",
+  "data": [
+    {
+      "id": "0",
+      "isValid": true,
+      "workno": "FXXXXXXX",
+      "username": "特仑苏",
+      "gender": "1",
+      "entrydate": "2017/07/14",
+      "email": "mcd.951026@foxmail.com",
+      "position": 0
+    },
+    {
+      "id": "1",
+      "isValid": true,
+      "workno": "FXXXXXXX",
+      "username": "优乐美",
+      "gender": "2",
+      "entrydate": "2017/07/14",
+      "email": "mcd.951026@foxmail.com",
+      "position": 5
+    },
+    {
+      "id": "2",
+      "isValid": true,
+      "workno": "FXXXXXXX",
+      "username": "榴莲千层",
+      "gender": "2",
+      "entrydate": "2017/07/14",
+      "email": "mcd.951026@foxmail.com",
+      "position": 3
+    },
+    {
+      "id": "3",
+      "isValid": true,
+      "workno": "FXXXXXXX",
+      "username": "纯甄",
+      "gender": "1",
+      "entrydate": "2017/07/14",
+      "email": "mcd.951026@foxmail.com",
+      "position": 2
+    },
+    {
+      "id": "4",
+      "isValid": true,
+      "workno": "FXXXXXXX",
+      "username": "俏九州",
+      "gender": "2",
+      "entrydate": "2017/07/14",
+      "email": "mcd.951026@foxmail.com",
+      "position": 1
+    },
+    {
+      "id": "5",
+      "isValid": true,
+      "workno": "FXXXXXXX",
+      "username": "雅诗兰黛",
+      "gender": "1",
+      "entrydate": "2017/07/14",
+      "email": "mcd.951026@foxmail.com",
+      "position": 5
+    },
+    {
+      "id": "6",
+      "isValid": true,
+      "workno": "FXXXXXXX",
+      "username": "SK-II",
+      "gender": "1",
+      "entrydate": "2017/07/14",
+      "email": "mcd.951026@foxmail.com",
+      "position": 5
+    }
+  ]
+}

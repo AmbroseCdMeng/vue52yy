@@ -1,0 +1,107 @@
+{
+  "status": 0,
+  "message": "Success",
+  "data": [
+    {
+      "id": "0",
+      "icon": "el-icon-location",
+      "ename": "Guide",
+      "cname": "导航",
+      "isValid": true,
+      "hasPremise": true,
+      "targeBlank": false,
+      "path": "",
+      "children": [
+        {
+          "id": "0-1",
+          "icon": "",
+          "ename": "Item 02",
+          "cname": "项目 1",
+          "isValid": true,
+          "hasPremise": true,
+          "targeBlank": false,
+          "path": "",
+          "children": []
+        },
+        {
+          "id": "0-2",
+          "icon": "",
+          "ename": "Item 02",
+          "cname": "项目 2",
+          "isValid": true,
+          "hasPremise": true,
+          "targeBlank": false,
+          "path": "",
+          "children": []
+        },
+        {
+          "id": "0-3",
+          "icon": "",
+          "ename": "Item 03",
+          "cname": "项目 3",
+          "isValid": true,
+          "hasPremise": true,
+          "targeBlank": false,
+          "path": "",
+          "children": []
+        },
+        {
+          "id": "0-4",
+          "icon": "",
+          "ename": "SMenu 01",
+          "cname": "子菜单",
+          "isValid": true,
+          "hasPremise": true,
+          "targeBlank": false,
+          "path": "",
+          "children": [
+            {
+              "id": "0-4-1",
+              "icon": "",
+              "ename": "SItem 01",
+              "cname": "子项目 1",
+              "isValid": true,
+              "hasPremise": true,
+              "targeBlank": false,
+              "path": "",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "icon": "el-icon-menu",
+      "ename": "Menu",
+      "cname": "菜单",
+      "isValid": true,
+      "hasPremise": true,
+      "targeBlank": false,
+      "path": "",
+      "children": ""
+    },
+    {
+      "id": "2",
+      "icon": "el-icon-document",
+      "ename": "Files",
+      "cname": "文件",
+      "isValid": true,
+      "hasPremise": true,
+      "targeBlank": false,
+      "path": "",
+      "children": ""
+    },
+    {
+      "id": "3",
+      "icon": "el-icon-setting",
+      "ename": "Setting",
+      "cname": "设置",
+      "isValid": true,
+      "hasPremise": true,
+      "targeBlank": false,
+      "path": "",
+      "children": ""
+    }
+  ]
+}

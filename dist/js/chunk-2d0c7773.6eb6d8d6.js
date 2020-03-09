@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0c7773"],{5178:function(e,n,t){"use strict";t.r(n);var a=function(){var e=this,n=e.$createElement;e._self._c;return e._m(0)},c=[function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[t("h1",[e._v("数据图表")])])}],r={name:"Chart"},u=r,s=t("2877"),i=Object(s["a"])(u,a,c,!1,null,"02ba727a",null);n["default"]=i.exports}}]);
+//# sourceMappingURL=chunk-2d0c7773.6eb6d8d6.js.map
