@@ -5,7 +5,7 @@
             <el-input v-model="user.workno" clearable></el-input>
         </el-form-item>
         <el-form-item label="姓名">
-            <el-input v-model="user.name" clearable></el-input>
+            <el-input v-model="user.name" maxlength="8" minlength="2" show-word-limit clearable></el-input>
         </el-form-item>
         <el-form-item label="厂区">
             <el-select v-model="user.plantarea" placeholder="请选择厂区">
