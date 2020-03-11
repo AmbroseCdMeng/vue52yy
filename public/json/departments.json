@@ -1,0 +1,80 @@
+{
+  "status": 0,
+  "message": "Success",
+  "data": [
+    {
+      "value": "DPT-PROD-001",
+      "label": "生产一处",
+      "children": [
+        {
+          "value": "DPT-PROD-001-001",
+          "label": "一组",
+          "children": [
+            {
+              "value": "DPT-PROD-001-001-001",
+              "label": "一线",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "value": "DPT-PROD-002",
+      "label": "生产二处",
+      "children": []
+    },
+    {
+      "value": "DPT-PROD-003",
+      "label": "生产三处",
+      "children": []
+    },
+    {
+      "value": "DPT-DEVE-001",
+      "label": "开发一处",
+      "children": [
+        {
+          "value": "DPT-DEVE-001-001",
+          "label": "系统开发部",
+          "children": [
+            {
+              "value": "DPT-DEVE-001-001-001",
+              "label": "Java 开发组",
+              "children": []
+            },
+            {
+              "value": "DPT-DEVE-001-001-002",
+              "label": "Python 开发组",
+              "children": []
+            },
+            {
+              "value": "DPT-DEVE-001-001-003",
+              "label": "前端开发组",
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": "DPT-DEVE-001-002",
+          "label": "服务器运维部",
+          "children": []
+        },
+        {
+          "value": "DPT-DEVE-001-003",
+          "label": "需求规划部",
+          "children": []
+        }
+      ]
+    },
+    {
+      "value": "DPT-DEVE-001",
+      "label": "开发二处",
+      "children": []
+    },
+    {
+      "value": "DPT-DEVE-001",
+      "label": "开发三处",
+      "children": []
+    }
+  ]
+}

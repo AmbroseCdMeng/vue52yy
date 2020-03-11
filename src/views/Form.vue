@@ -14,6 +14,16 @@
                 <el-option label="四川成都" value="CD"></el-option>
             </el-select>
         </el-form-item>
+        <el-form-item label="部门">
+          <div class="block">
+            <!-- <span class="demonstration">hover 触发子菜单</span> -->
+            <el-cascader
+              v-model="user.dept"
+              :options="departments"
+              :props="{ expandTrigger: 'hover' }"
+              @change="handleChange"></el-cascader>
+          </div>
+        </el-form-item>
         <el-form-item label="出生日期">
             <el-col :span="24">
                 <el-date-picker type="birthday" placeholder="选择日期" v-model="user.date1" style="width: 100%;"></el-date-picker>
@@ -94,6 +104,7 @@ export default {
         workno: '',
         name: '',
         plantarea: '',
+        dept: [],
         birthday: '',
         isvalild: false,
         positions: 3,
@@ -108,6 +119,8 @@ export default {
       isIndeterminate: true,
       checkAll: false,
       email_prefix: 'hzlh',
+
+      departments: [],
       positions: [{
         value: 0,
         text: '无'
@@ -162,7 +175,24 @@ export default {
       const length = val.length
       this.checkAll = length === this.cities.length
       this.isIndeterminate = length > 0 && length < this.cities.length
+    },
+    handleChange (val) {
+
+    },
+    loadDepartments () {
+      const url = './json/departments.json'
+      this.axios.get(url).then(response => {
+        this.departments = response.data.data
+      }).catch(error => {
+        this.$message({
+          message: error.message,
+          type: 'error'
+        })
+      })
     }
+  },
+  created () {
+    this.loadDepartments()
   }
 }
 </script>
