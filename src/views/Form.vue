@@ -260,8 +260,7 @@ export default {
           }
         }]
       }
-    },
-    
+    }
   },
   methods: {
     onSubmit () {
