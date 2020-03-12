@@ -84,6 +84,15 @@
             </template>
         </el-form-item>
 
+        <el-form-item>
+            <template>
+                <el-select v-model="user.hobby" multiple placeholder="请选择">
+                  <el-option v-for="item in hobbies" :key="item.key" :value="item.value" :label="item.label">
+                  </el-option>
+                </el-select>
+            </template>
+        </el-form-item>
+
         <el-form-item label="备注信息">
             <el-input type="textarea" v-model="user.desc" placeholder="请输入备注内容" :autosize="{minRows: 2, maxRows: 4}"></el-input>
         </el-form-item>
@@ -112,6 +121,7 @@ export default {
         cities: ['湖北全省', '非湖北及周边省市'],
         heatRange: '1',
         heat: '36.5',
+        hobby:'',
         desc: ''
       },
       cities: ['湖北全省', '湖北周边省市', '海外', '非湖北及周边省市', '其他'],
@@ -156,7 +166,25 @@ export default {
         name: '张三',
         email: '369652@gmail.com'
       }
-      ]
+      ],
+
+      hobbies:[{
+        key:0,
+        value:'coding',
+        label:'写代码'
+      },{
+        key:1,
+        value:'learning',
+        label:'学习'
+      },{
+        key:2,
+        value:'reading',
+        label:'阅读'
+      },{
+        key:3,
+        value:'working',
+        label:'工作'
+      }]
     }
   },
   methods: {
