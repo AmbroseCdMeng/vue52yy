@@ -82,10 +82,50 @@
                 <el-radio label="4" border>38.0 以上</el-radio>
             </el-radio-group>
         </el-form-item>
+        <el-form-item label="正常体温范围参考">
+          <el-slider v-model="user.heat" range show-stops :min="34.0" :max="42.0" value="[36.5, 37.5]" disabled :format-tooltip="formatTooltip"></el-slider>
+        </el-form-item>
+        <el-form-item label="体温滑块显示">
+          <el-slider v-model="user.heat" :step="0.1" show-input :format-tooltip="formatTooltip"></el-slider>
+        </el-form-item>
         <el-form-item>
             <template>
                 <el-input-number v-model="user.heat" :precision="1" :step="0.1" :max="40.0" :min="35.0"></el-input-number>
             </template>
+        </el-form-item>
+
+        <el-form-item>
+          <el-time-picker
+            v-model="startWorkTime"
+            :picker-options="{
+              selectableRange: '18:30:00 - 20:30:00'
+            }"
+            placeholder="上班时间（固定时间）">
+          </el-time-picker>
+          <el-time-picker
+            arrow-control
+            v-model="endWorkTime"
+            :picker-options="{
+              start: '08:30',
+              step: '00:15',
+              end: '17:30',
+              minTime: startWorkTime
+            }"
+            placeholder="下班时间（任意时间）">
+          </el-time-picker>
+        </el-form-item>
+
+        <el-form-item>
+          <el-date-picker
+            v-model="hopeInWorkDate"
+            type="daterange"
+            align="right"
+            unlink-panels
+            range-separator="至"
+            start-placeholder="开始日期"
+            end-placeholder="结束日期"
+            :picker-options="pickerOptions">
+          </el-date-picker>
         </el-form-item>
 
         <el-form-item>
@@ -126,6 +166,9 @@ export default {
         heatRange: '1',
         heat: '36.5',
         hobby:'',
+        startWorkTime:new Date(2020, 3, 12, 8, 30),
+        endWorkTime:new Date(2020, 3, 12, 17, 30),
+        hopeInWorkDate:new Date(),
         desc: ''
       },
       cities: ['湖北全省', '湖北周边省市', '海外', '非湖北及周边省市', '其他'],
@@ -188,12 +231,44 @@ export default {
         key:3,
         value:'working',
         label:'工作'
-      }]
-    }
+      }],
+      /* 日期快捷选项规则 */
+      pickerOptions: {
+        shortcuts: [{
+          text: '最近一周',
+          onClick(picker) {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);
+            picker.$emit('pick', [start, end]);
+          }
+        }, {
+          text: '最近一个月',
+          onClick(picker) {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);
+            picker.$emit('pick', [start, end]);
+          }
+        }, {
+          text: '最近三个月',
+          onClick(picker) {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);
+            picker.$emit('pick', [start, end]);
+          }
+        }]
+      }
+    },
+    
   },
   methods: {
     onSubmit () {
       // console.log('submit!')
+    },
+    formatTooltip(val){
+      return `${val}℃ `
     },
     handleRadioChange (val) {
 
@@ -221,7 +296,8 @@ export default {
           type: 'error'
         })
       })
-    }
+    },
+    
   },
   created () {
     this.loadDepartments()
