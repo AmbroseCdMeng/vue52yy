@@ -16,12 +16,16 @@
         </el-form-item>
         <el-form-item label="部门">
           <div class="block">
-            <!-- <span class="demonstration">hover 触发子菜单</span> -->
             <el-cascader
               v-model="user.dept"
               :options="departments"
               :props="{ expandTrigger: 'hover' }"
-              @change="handleChange"></el-cascader>
+              @change="handleChange"
+              clearable
+              filterable
+              placeholder="可搜索，如：开发"
+              show-all-levels=true
+              props.multiple=false ></el-cascader>
           </div>
         </el-form-item>
         <el-form-item label="出生日期">
