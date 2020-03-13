@@ -12,8 +12,15 @@
           "children": [
             {
               "value": "DPT-PROD-001-001-001",
-              "label": "一线",
-              "children": []
+              "label": "一线"
+            },
+            {
+              "value": "DPT-PROD-001-001-002",
+              "label": "二线"
+            },
+            {
+              "value": "DPT-PROD-001-001-003",
+              "label": "三线"
             }
           ]
         }
@@ -39,18 +46,15 @@
           "children": [
             {
               "value": "DPT-DEVE-001-001-001",
-              "label": "Java 开发组",
-              "children": []
+              "label": "Java 开发组"
             },
             {
               "value": "DPT-DEVE-001-001-002",
-              "label": "Python 开发组",
-              "children": []
+              "label": "Python 开发组"
             },
             {
               "value": "DPT-DEVE-001-001-003",
-              "label": "前端开发组",
-              "children": []
+              "label": "前端开发组"
             }
           ]
         },

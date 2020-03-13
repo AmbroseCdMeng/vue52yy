@@ -165,10 +165,10 @@ export default {
         cities: ['湖北全省', '非湖北及周边省市'],
         heatRange: '1',
         heat: '36.5',
-        hobby:'',
-        startWorkTime:new Date(2020, 3, 12, 8, 30),
-        endWorkTime:new Date(2020, 3, 12, 17, 30),
-        hopeInWorkDate:new Date(),
+        hobby: '',
+        startWorkTime: new Date(2020, 3, 12, 8, 30),
+        endWorkTime: new Date(2020, 3, 12, 17, 30),
+        hopeInWorkDate: new Date(),
         desc: ''
       },
       cities: ['湖北全省', '湖北周边省市', '海外', '非湖北及周边省市', '其他'],
@@ -215,48 +215,48 @@ export default {
       }
       ],
 
-      hobbies:[{
-        key:0,
-        value:'coding',
-        label:'写代码'
-      },{
-        key:1,
-        value:'learning',
-        label:'学习'
-      },{
-        key:2,
-        value:'reading',
-        label:'阅读'
-      },{
-        key:3,
-        value:'working',
-        label:'工作'
+      hobbies: [{
+        key: 0,
+        value: 'coding',
+        label: '写代码'
+      }, {
+        key: 1,
+        value: 'learning',
+        label: '学习'
+      }, {
+        key: 2,
+        value: 'reading',
+        label: '阅读'
+      }, {
+        key: 3,
+        value: 'working',
+        label: '工作'
       }],
       /* 日期快捷选项规则 */
       pickerOptions: {
         shortcuts: [{
           text: '最近一周',
-          onClick(picker) {
-            const end = new Date();
-            const start = new Date();
-            start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);
-            picker.$emit('pick', [start, end]);
+          onClick (picker) {
+            const end = new Date()
+            const start = new Date()
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 7)
+            picker.$emit('pick', [start, end])
           }
         }, {
           text: '最近一个月',
-          onClick(picker) {
-            const end = new Date();
-            const start = new Date();
-            start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);
-            picker.$emit('pick', [start, end]);
+          onClick (picker) {
+            const end = new Date()
+            const start = new Date()
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 30)
+            picker.$emit('pick', [start, end])
           }
         }, {
           text: '最近三个月',
-          onClick(picker) {
-            const end = new Date();
-            const start = new Date();
-            start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);
-            picker.$emit('pick', [start, end]);
+          onClick (picker) {
+            const end = new Date()
+            const start = new Date()
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 90)
+            picker.$emit('pick', [start, end])
           }
         }]
       }
@@ -266,7 +266,7 @@ export default {
     onSubmit () {
       // console.log('submit!')
     },
-    formatTooltip(val){
+    formatTooltip (val) {
       return `${val}℃ `
     },
     handleRadioChange (val) {
@@ -295,8 +295,8 @@ export default {
           type: 'error'
         })
       })
-    },
-    
+    }
+
   },
   created () {
     this.loadDepartments()
